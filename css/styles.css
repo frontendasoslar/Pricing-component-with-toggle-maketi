@@ -1,0 +1,307 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+      url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+ --white: #fff;
+ --usually-text-color: #6E728E;
+ --cost-symbol-color: #4A4D60;
+ --button-bg-color: #6D72DE;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+/* Meros qilib olish */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Montserrat", "Arial", sans-serif;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  background-color: #f7f7fe;
+  color: #000;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  font-family: "Arial", sans-serif;
+  font-weight: 700;
+  background-image: url("../img/left-bg.svg"),
+  url("../img/right-bg.svg");
+  background-position: left -120px bottom -460px,
+  right -100px top -100px;
+  background-repeat: no-repeat;
+}
+
+* {
+  outline: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1090px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 40px;;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* Switch */
+.plan-type {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 64px;
+}
+.plan-type-heading {
+  padding: 0;
+  margin-bottom: 40px;
+  margin: 0;
+  text-align: center;
+  line-height: 39px;
+  font-weight: 700;
+  font-family: "Montserrat", "Arial", sans-serif;
+  text-align: center;
+  color: var(--usually-text-color);
+}
+
+/* Switch bo'limi */
+.pracing-switch {
+  margin-top: 40px;
+}
+
+.switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.label-switch {
+  font-size: 15px;
+  color: var(--usually-text-color);
+  opacity: 0.5;
+  line-height: 28px;
+  font-family: "Montserrat", "Arial", sans-serif;
+}
+
+.switch-control {
+  position: relative;
+  width: 56px;
+  height: 32px;
+  border-radius: 16px;
+  background-image: linear-gradient(135.00deg, rgb(162, 167, 240) -25.385%,rgb(105, 110, 221) 74.615%);
+  margin-left: 24px;
+  margin-right: 24px;
+  padding: 4px;
+  /* Rangli switchning claslari */
+}
+
+.switch-control:hover {
+  opacity: 0.5;
+}
+
+.switch-cirkle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: margin 0.3s ease;
+  /* Rangli switchning ichidagi oq aylanani klaslari */
+}
+
+.switch-control-anually,
+.switch-control-monthly {
+  position: absolute;
+  transform: translateY(-100%);
+  left: 0;
+  height: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  /* Oq aylanani ichidagi labellar rangli switchni ichiga joylashishi uchun .switch-control-anually, .switch-control-monthly larga berilgan klaslar */
+}
+
+.checkbox-anually:checked ~ .switch-control .switch-control-monthly,
+.checkbox-monthly:checked ~ .switch-control .switch-control-anually {
+  z-index: 5;
+  /* anually input chekked bo'lganda switch-control-monthly tepaga chiqsin, monthly input chekked bo'lganda switch-control-anually tepaga chiqsin, */
+}
+
+.checkbox-monthly:checked ~ .switch-control .switch-cirkle {
+  margin-left: 24px;
+  /* momthly checkbox checked bo'lganda oq aylana rangli switchning ichida monthly tomonga o'tishi uchun berildi */
+}
+
+
+.label-switch:hover {
+  opacity: 1;
+}
+
+
+/* Pricing  */
+.pricing-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.pricing-list-item {
+  padding: 30px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--white);
+  width: calc(100%/3);
+  border-radius: 10px 0px 0px 10px;;
+}
+
+.proffesional-list-item {
+  color: var(--white);
+  font-family: "Montserrat", "Arial", sans-serif;
+  border-radius: 10px;
+  padding-top: 55px;
+  padding-bottom: 55px;
+  box-shadow: 0px 20px 40px 0px rgba(212, 210, 244, 0.5);
+  background-image: linear-gradient(135.00deg, rgb(162, 167, 240) -0.067%,rgb(105, 110, 221) 100.067%);
+}
+
+.master-list-item {
+  border-radius: 0px 10px 10px 0px;
+}
+
+.pricing-type {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 24px;
+  color: var(--usually-text-color)
+}
+
+.proffesional-list-item .pricing-type {
+  color: var(--white);
+}
+
+.proffesional-list-item .price-cost {
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: var(--white);
+  border-bottom: 1px solid var(--white);
+}
+.price-cost {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cost-symbol-color);
+  border-bottom: 1px solid var(--usually-text-color);
+  padding-bottom: 32px;
+  margin-bottom: 12px;
+}
+.current-symbol {
+  padding: 0;
+  margin: 0;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 49px;
+  letter-spacing: -1.2px;
+  margin-left: 8px;
+}
+.current-number {
+  padding: 0;
+  margin: 0;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 49px;
+  letter-spacing: -1.2px;
+}
+.type-feauture {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-bottom: 32px;
+}
+.type-feauture-item {
+  padding: 0;
+  margin: 0;
+  color: var(--usually-text-color);
+  font-size: 15px;
+  line-height: 28px;
+  font-weight: 700;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--usually-text-color);
+}
+
+.proffesional-list-item .type-feauture-item {
+  border-bottom: 1px solid var(--white);
+}
+
+.type-feauture-item:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.proffesional-list-item .type-feauture-item {
+  color: var(--white);
+}
+
+.price-button {
+  padding: 14px;
+  margin: 0;
+  cursor: pointer;
+  border: 0;
+  border-radius: 6px;
+  background-image: linear-gradient(135.00deg, rgb(162, 167, 240) 0%,rgb(105, 110, 221) 100%);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.proffesional-list-item .price-button {
+  color: rgb(109, 114, 222);
+  background-image: linear-gradient(135.00deg, white 0%, white 100%);
+
+}

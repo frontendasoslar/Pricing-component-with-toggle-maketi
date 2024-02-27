@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing component with toggle maketi</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="main-content">
+    <div class="container">
+      <!-- Switch bo'limi -->
+      <div class="plan-type">
+        <h2 class="plan-type-heading">Our Pricing</h2>
+        <form class="pracing-switch"  method="get">
+          <div class="switch">
+            <input class="checkbox-anually visually-hidden" type="radio" name="payment-period" value="anually" id="anually-payments-radio">
+            <!-- anually tipining inputi -->
+            <input class="checkbox-monthly visually-hidden" type="radio" name="payment-period" value="monthly" id="monthly-payments-radio" checked>
+             <!-- monthly tipining inputi -->
+            <label class="label-switch" for="anually-payments-radio">Anually</label>
+            <!-- anually tipining labeli -->
+            <div class="switch-control">
+              <!-- Switchning rangli karobkasi tegi -->
+              <div class="switch-cirkle"></div>
+              <!-- oq kalsoning tegi -->
+                <label class="switch-control-anually" for="anually-payments-radio"></label>
+                <!-- Switch bosilganda chekboz ishlashi uchun teg -->
+                <label class="switch-control-monthly" for="monthly-payments-radio"></label>
+                <!-- Switch bosilganda chekboz ishlashi uchun teg -->
+            </div>
+            <!-- O'rtadagi switch uchun tegi -->
+            <label class="label-switch" for="monthly-payments-radio">Monthly</label>
+            <!-- monthly tipining labeli -->
+          </div>
+        </form>
+      </div>
+
+      <!-- Info type -->
+      <ul class="pricing-list">
+        <!-- Basic type -->
+        <li class="pricing-list-item" data-payment-anually="199.99" data-payment-monthly="19.99" data-stroge-anually="7 TB" data-stroge-monthly="500 GB" data-allow-anually="25" data-allow-monthly="2" data-send-anually="35" data-send-monthly="3">
+          <!-- data atribullari  switch o'zgartirilganda ma'lumotlar o'zgarishi uchun kiritildi o'zgatrirish uchun kiritildi-->
+          <h2 class="pricing-type">Basic</h2>
+          <div class="price-cost">
+            <span class="current-symbol">$</span>
+            <span class="current-number">19.99</span>
+          </div>
+          <ul class="type-feauture">
+            <li class="type-feauture-item"><span class="type-feauture-item-stroge">500 GB</span> Storage</li>
+            <li class="type-feauture-item"><span class="type-feauture-item-allow">2</span> Users Allowed</li>
+            <li class="type-feauture-item">Send up to <span class="type-feauture-item-send">3</span> GB</li>
+          </ul>
+          <button class="price-button" type="button">LEARN MORE</button>
+        </li>
+
+        <!-- Proffesional-type -->
+        <li class="pricing-list-item proffesional-list-item" data-payment-anually="249.99" data-payment-monthly="24.99" data-stroge-anually="15" data-stroge-monthly="1" data-allow-anually="70" data-allow-monthly="5" data-send-anually="130" data-send-monthly="10">
+          <!-- data atribullari  switch o'zgartirilganda ma'lumotlar o'zgarishi uchun kiritildi o'zgatrirish uchun kiritildi-->
+          <h2 class="pricing-type">Professional</h2>
+          <div class="price-cost">
+            <span class="current-symbol">$</span>
+            <span class="current-number">24.99</span>
+          </div>
+          <ul class="type-feauture">
+            <li class="type-feauture-item"><span class="type-feauture-item-stroge">1</span> TB Storage</li>
+            <li class="type-feauture-item"><span class="type-feauture-item-allow">5</span> Users Allowed</li>
+            <li class="type-feauture-item">Send up to <span class="type-feauture-item-send">10</span> GB</li>
+          </ul>
+          <button class="price-button" type="button">LEARN MORE</button>
+        </li>
+
+        <!-- Master-ytpe -->
+        <li class="pricing-list-item master-list-item" data-payment-anually="399.99" data-payment-monthly="39.99" data-stroge-anually="30" data-stroge-monthly="2" data-allow-anually="135" data-allow-monthly="10" data-send-anually="250" data-send-monthly="20">
+          <!-- data atribullari  switch o'zgartirilganda ma'lumotlar o'zgarishi uchun kiritildi o'zgatrirish uchun kiritildi-->
+          <h2 class="pricing-type">Master</h2>
+          <div class="price-cost">
+            <span class="current-symbol">$</span>
+            <span class="current-number">39.99</span>
+          </div>
+          <ul class="type-feauture">
+            <li class="type-feauture-item"><span class="type-feauture-item-stroge">2</span> TB Storage</li>
+            <li class="type-feauture-item"><span class="type-feauture-item-allow">10</span> Users Allowed</li>
+            <li class="type-feauture-item">Send up to <span class="type-feauture-item-send">20</span> GB</li>
+          </ul>
+          <button class="price-button" type="button">LEARN MORE</button>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>
